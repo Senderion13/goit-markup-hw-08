@@ -149,8 +149,6 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
 
 .header {
     &__container {
-        width: 100%;
-        box-sizing: content-box;
         z-index: 1;
         display: flex;
         position: relative;
@@ -161,17 +159,22 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
     }
     
     &__container.menu-is-open {
-        position: absolute;
-        top: -100%;
-        left: 0;
+        flex-direction: column;
+        width: 100%;
         width: 100%;
         height: 100%;
         background-color: $background-color-white;
         overflow-y: scroll;
-        transform: translateY(100%);
+        transform: translateY(0);
         transition-duration: 250ms;
         & .logo {
             display: none;
+        }
+
+        .menu-button {
+            @media screen and (min-width: 480px) {
+                transform: translate(50%, 25%);                
+            }
         }
     }
 
@@ -240,7 +243,8 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
     }
 
     &__container.menu-is-open {
-        
+        align-items: flex-start;
+        padding: 0;
         .menu-icon {
             display: none;
         }
@@ -252,24 +256,18 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
         &__socials {
             display: block;
         }
-    } 
-
-    &__container.menu-is-open{
-        align-items: flex-start;
-        padding: 0;
+        
         .header__items {
             display: block;
-
             & .link {
                 padding: 0;
             }
         }
 
-        .header__links {
+        & .header__links {
             display: block;
-            position: absolute;
-            bottom: 134px;
-            left: 40px;
+            padding-left: 40px;
+            padding-top: 38vh;
 
             & li {
                 margin-bottom: 32px;
@@ -302,9 +300,9 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
         .header__socials {
             display: flex;
             flex-wrap: wrap;
-            position: absolute;
-            bottom: 48px;
-            left: 40px;
+            padding-left: 40px;
+            padding-top: 64px;
+            padding-bottom: 48px;
             margin: 0;
             width: calc(100% - 40px);
             height: min-content;
@@ -333,7 +331,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
 
     &__items {
         display: none;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
             margin-top: 48px;
             margin-left: 40px;
         }
@@ -1330,3 +1328,4 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
         letter-spacing: 0.03em;    
     }
 }
+

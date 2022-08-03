@@ -515,9 +515,6 @@
         let menu = document.getElementsByClassName("header__container");
         menu[0].classList.toggle("menu-is-open");
         let body = document.getElementsByTagName("body");
-        document
-          .getElementsByClassName("header")[0]
-          .classList.toggle("menu-is-open");
         if (menu[0].classList[2] == "menu-is-open") {
           body[0].style.overflowY = "hidden";
         } else {
@@ -527,16 +524,13 @@
 
       window.addEventListener("orientationchange", menuClose);
       function menuClose() {
-        console.log(document.documentElement.clientWidth);
+        console.log(document.documentElement.clientHeight);
         if (
           document.getElementsByClassName("header__container")[0]
-            .classList[2] == "menu-is-open"
+            .classList[2] == "menu-is-open" &&
+          document.documentElement.clientHeight > "767.9px"
         ) {
-          if (
-            window.orientation == -90 ||
-            window.orientation == 90 ||
-            document.documentElement.clientWidth > "767px"
-          ) {
+          if (window.orientation == -90 || window.orientation == 90) {
             menuOpen();
           }
         }
