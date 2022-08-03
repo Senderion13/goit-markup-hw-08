@@ -13,17 +13,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/styles.min.css" />
 
     <title>Студия</title>
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header__container">
         <nav class="header__nav">
           <a href="./index.html" class="logo">
             <span class="logo__span">Web</span>Studio</a
           >
+          <button type="button" class="menu-button" onclick="menuOpen()">
+            <svg width="40" height="40">
+              <use
+                class="menu-icon"
+                href="./images/symbol-defs.svg#icon-menu"
+              ></use>
+              <use
+                class="menu-close-icon"
+                href="./images/symbol-defs.svg#icon-menu-close"
+              ></use>
+            </svg>
+          </button>
           <ul class="header__items">
             <li>
               <a href="./index.html" class="link active">Студия</a>
@@ -58,17 +70,23 @@
             >
           </li>
         </ul>
+        <div class="socials header__socials">
+          <a class="socials__link" href="#"> Instagram </a>
+          <a class="socials__link" href="#"> Twitter </a>
+          <a class="socials__link" href="#"> Facebook </a>
+          <a class="socials__link" href="#"> LinkedIn </a>
+        </div>
       </div>
     </header>
     <main>
       <div class="hero">
         <section>
           <div class="container">
-            <h1>
+            <h1 class="hero__text">
               Эффективные решения<br />
               для вашего бизнеса
             </h1>
-            <button onclick="modalOpen()" class="primary button">
+            <button onclick="modalOpen()" class="hero__button primary button">
               Заказать услугу
             </button>
           </div>
@@ -171,7 +189,7 @@
                 <img
                   src="./images/men1.jpg"
                   alt="Мужчина в коричневой рубашке"
-                  width="270px"
+                  width="100%"
                 />
                 <h3>Игорь Демьяненко</h3>
                 <p>Product Designer</p>
@@ -202,7 +220,7 @@
                 <img
                   src="./images/woman1.jpg"
                   alt="Женщина в пиджаке"
-                  width="270px"
+                  width="100%"
                 />
                 <h3>Ольга Репина</h3>
                 <p>Frontend Developer</p>
@@ -233,7 +251,7 @@
                 <img
                   src="./images/men2.jpg"
                   alt="Мужчина в белой рубашке"
-                  width="270px"
+                  width="100%"
                 />
                 <h3>Николай Тарасов</h3>
                 <p>Marketing</p>
@@ -264,7 +282,7 @@
                 <img
                   src="./images/men3.jpg"
                   alt="Мужчина в черной футболке"
-                  width="270px"
+                  width="100%"
                 />
                 <h3>Михаил Ермаков</h3>
                 <p>UI Designer</p>
@@ -339,7 +357,7 @@
     <!----------------------- Footer ------------------------>
     <footer class="footer">
       <div class="container">
-        <div>
+        <div class="footer__address-block">
           <a href="./index.html" class="logo">
             <span class="logo__span">Web</span>Studio</a
           >
@@ -468,10 +486,11 @@
     </div>
     <script>
       function modalOpen() {
-        let modal = document.getElementsByClassName("modal");
-        modal[0].classList.add("visible");
         let body = document.getElementsByTagName("body");
         body[0].style.overflow = "hidden";
+        let modal = document.getElementsByClassName("modal");
+        modal[0].style.overflowY = "scroll";
+        modal[0].classList.add("visible");
       }
       function modalClose() {
         let modal = document.getElementsByClassName("modal");
@@ -491,6 +510,37 @@
             );
           });
       })();
+
+      function menuOpen() {
+        let menu = document.getElementsByClassName("header__container");
+        menu[0].classList.toggle("menu-is-open");
+        let body = document.getElementsByTagName("body");
+        document
+          .getElementsByClassName("header")[0]
+          .classList.toggle("menu-is-open");
+        if (menu[0].classList[2] == "menu-is-open") {
+          body[0].style.overflowY = "hidden";
+        } else {
+          body[0].style.overflowY = "scroll";
+        }
+      }
+
+      window.addEventListener("orientationchange", menuClose);
+      function menuClose() {
+        console.log(document.documentElement.clientWidth);
+        if (
+          document.getElementsByClassName("header__container")[0]
+            .classList[2] == "menu-is-open"
+        ) {
+          if (
+            window.orientation == -90 ||
+            window.orientation == 90 ||
+            document.documentElement.clientWidth > "767px"
+          ) {
+            menuOpen();
+          }
+        }
+      }
     </script>
   </body>
 </html>

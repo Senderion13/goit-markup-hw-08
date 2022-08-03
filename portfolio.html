@@ -13,16 +13,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/styles.min.css" />
     <title>Портфолио</title>
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header__container">
         <nav class="header__nav">
           <a href="./index.html" class="logo">
             <span class="logo__span">Web</span>Studio</a
           >
+          <button type="button" class="menu-button" onclick="menuOpen()">
+            <svg width="40" height="40">
+              <use
+                class="menu-icon"
+                href="./images/symbol-defs.svg#icon-menu"
+              ></use>
+              <use
+                class="menu-close-icon"
+                href="./images/symbol-defs.svg#icon-menu-close"
+              ></use>
+            </svg>
+          </button>
           <ul class="header__items">
             <li>
               <a href="./index.html" class="link">Студия</a>
@@ -57,6 +69,12 @@
             >
           </li>
         </ul>
+        <div class="socials header__socials">
+          <a class="socials__link" href="#"> Instagram </a>
+          <a class="socials__link" href="#"> Twitter </a>
+          <a class="socials__link" href="#"> Facebook </a>
+          <a class="socials__link" href="#"> LinkedIn </a>
+        </div>
       </div>
     </header>
     <main>
@@ -64,20 +82,20 @@
         <div class="container">
           <h2 class="hidden-header">Filters</h2>
           <ul class="filters__list">
-            <li>
-              <a href="#" class="filters__item active">Все</a>
+            <li class="filters__item">
+              <a href="#">Все</a>
             </li>
-            <li>
-              <a href="#" class="filters__item">Веб-сайты</a>
+            <li class="filters__item">
+              <a href="#">Веб-сайты</a>
             </li>
-            <li>
-              <a href="#" class="filters__item">Приложения</a>
+            <li class="filters__item">
+              <a href="#">Приложения</a>
             </li>
-            <li>
-              <a href="#" class="filters__item">Дизайн</a>
+            <li class="filters__item">
+              <a href="#">Дизайн</a>
             </li>
-            <li>
-              <a href="#" class="filters__item">Маркетинг</a>
+            <li class="filters__item">
+              <a href="#">Маркетинг</a>
             </li>
           </ul>
         </div>
@@ -201,7 +219,7 @@
     <!----------------------- Footer ------------------------>
     <footer class="footer">
       <div class="container">
-        <div>
+        <div class="footer__address-block">
           <a href="./index.html" class="logo">
             <span class="logo__span">Web</span>Studio</a
           >
@@ -250,5 +268,18 @@
         </div>
       </div>
     </footer>
+    <script>
+      function menuOpen() {
+        let menu = document.getElementsByClassName("header__container");
+        menu[0].classList.toggle("menu-is-open");
+        let body = document.getElementsByTagName("body");
+        console.log(menu[0].classList[2]);
+        if (menu[0].classList[2] == "menu-is-open") {
+          body[0].style.overflowY = "hidden";
+        } else {
+          body[0].style.overflowY = "scroll";
+        }
+      }
+    </script>
   </body>
 </html>
