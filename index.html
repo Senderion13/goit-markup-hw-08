@@ -514,25 +514,25 @@
       function menuOpen() {
         let menu = document.getElementsByClassName("header__container");
         menu[0].classList.toggle("menu-is-open");
-        let body = document.getElementsByTagName("body");
+        let main = document.getElementsByTagName("main");
+        let footer = document.getElementsByTagName("footer");
         if (menu[0].classList[2] == "menu-is-open") {
-          body[0].style.overflowY = "hidden";
+          main[0].style.display = "none";
+          footer[0].style.display = "none";
         } else {
-          body[0].style.overflowY = "scroll";
+          main[0].style.display = "block";
+          footer[0].style.display = "block";
         }
       }
 
-      window.addEventListener("orientationchange", menuClose);
+      window.addEventListener("resize", menuClose);
       function menuClose() {
-        console.log(document.documentElement.clientHeight);
         if (
           document.getElementsByClassName("header__container")[0]
             .classList[2] == "menu-is-open" &&
-          document.documentElement.clientHeight > "767.9px"
+          window.screen.width > 767.9
         ) {
-          if (window.orientation == -90 || window.orientation == 90) {
-            menuOpen();
-          }
+          menuOpen();
         }
       }
     </script>

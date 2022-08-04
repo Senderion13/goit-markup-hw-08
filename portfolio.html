@@ -272,12 +272,25 @@
       function menuOpen() {
         let menu = document.getElementsByClassName("header__container");
         menu[0].classList.toggle("menu-is-open");
-        let body = document.getElementsByTagName("body");
-        console.log(menu[0].classList[2]);
+        let main = document.getElementsByTagName("main");
+        let footer = document.getElementsByTagName("footer");
         if (menu[0].classList[2] == "menu-is-open") {
-          body[0].style.overflowY = "hidden";
+          main[0].style.display = "none";
+          footer[0].style.display = "none";
         } else {
-          body[0].style.overflowY = "scroll";
+          main[0].style.display = "block";
+          footer[0].style.display = "block";
+        }
+      }
+
+      window.addEventListener("resize", menuClose);
+      function menuClose() {
+        if (
+          document.getElementsByClassName("header__container")[0]
+            .classList[2] == "menu-is-open" &&
+          window.screen.width > 767.9
+        ) {
+          menuOpen();
         }
       }
     </script>
