@@ -211,13 +211,21 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
     .menu-button {
         display: flex;
         position: absolute;
+        width: 40px;
+        height: 40px;
         margin: 0;
-        top: 10px;
         right: 0;
         padding: 0;
+        padding-right: 15px;
         border: none;
         background: transparent;
-        transform: translateY(25%);
+        align-items: center;
+
+        & svg {
+            margin: 0 auto;
+            width: 24px;
+            height: 19px;
+        }
 
         .menu-close-icon {
             display: none;
@@ -245,6 +253,12 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
     &__container.menu-is-open {
         align-items: flex-start;
         padding: 0;
+
+        .menu-button {
+            top: 0;
+            right: 15px;
+        }
+
         .menu-icon {
             display: none;
         }
