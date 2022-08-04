@@ -307,6 +307,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
             width: calc(100% - 40px);
             height: min-content;
             & .socials__link {
+                position: relative;
                 text-decoration: none;
                 font-size: 18px;
                 font-weight: 500;
@@ -318,10 +319,11 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
                     margin-right: 20px;
                 }
                 &:not(:last-child)::after {
-                    position: absolute;
                     content: "|";
                     color: #21212133;
-                    margin-left: 10px;
+                    position: absolute;
+                    top: 0;
+                    right: -15px;
                 }
 
                 

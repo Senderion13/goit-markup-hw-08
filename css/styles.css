@@ -303,6 +303,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   height: min-content;
 }
 .header__container.menu-is-open .header__socials .socials__link {
+  position: relative;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -314,10 +315,11 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   margin-right: 20px;
 }
 .header__container.menu-is-open .header__socials .socials__link:not(:last-child)::after {
-  position: absolute;
   content: "|";
   color: rgba(33, 33, 33, 0.2);
-  margin-left: 10px;
+  position: absolute;
+  top: 0;
+  right: -15px;
 }
 .header__items {
   display: none;
