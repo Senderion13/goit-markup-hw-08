@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/styles.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Портфолио</title>
   </head>
   <body>
@@ -25,13 +25,10 @@
           >
           <button type="button" class="menu-button" onclick="menuOpen()">
             <svg width="40" height="40">
-              <use
-                class="menu-icon"
-                href="./images/symbol-defs.svg#icon-menu"
-              ></use>
+              <use class="menu-icon" href="./images/sprite.svg#menu"></use>
               <use
                 class="menu-close-icon"
-                href="./images/symbol-defs.svg#icon-menu-close"
+                href="./images/sprite.svg#menu-close"
               ></use>
             </svg>
           </button>
@@ -49,10 +46,7 @@
           <li>
             <a href="mailto: info@devstudio.com" class="link">
               <svg width="16px" height="12px">
-                <use
-                  href="./images/symbol-defs.svg#icon-email"
-                  width="16px"
-                ></use>
+                <use href="./images/sprite.svg#email" width="16px"></use>
               </svg>
               info@devstudio.com
             </a>
@@ -60,10 +54,7 @@
           <li>
             <a href="tel:+380961111111" class="link">
               <svg width="10px" height="16px">
-                <use
-                  href="./images/symbol-defs.svg#icon-smartphone"
-                  width="10px"
-                ></use>
+                <use href="./images/sprite.svg#smartphone" width="10px"></use>
               </svg>
               +38 096 111 11 11</a
             >
@@ -111,7 +102,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio1.jpg" alt="" />
+                <img src="./images/portfolio/portfolio1.jpg" alt="" />
               </div>
               <h3>Технокряк</h3>
               <p class="projects__description">Веб-сайт</p>
@@ -123,7 +114,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio2.jpg" alt="" />
+                <img src="./images/portfolio/portfolio2.jpg" alt="" />
               </div>
               <h3>Постер New Orlean vs Golden Star</h3>
               <p class="projects__description">Дизайн</p>
@@ -135,7 +126,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio3.jpg" alt="" />
+                <img src="./images/portfolio/portfolio3.jpg" alt="" />
               </div>
               <h3>Ресторан Seafood</h3>
               <p class="projects__description">Приложение</p>
@@ -147,7 +138,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio4.jpg" alt="" />
+                <img src="./images/portfolio/portfolio4.jpg" alt="" />
               </div>
               <h3>Проект Prime</h3>
               <p class="projects__description">Маркетинг</p>
@@ -159,7 +150,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio5.jpg" alt="" />
+                <img src="./images/portfolio/portfolio5.jpg" alt="" />
               </div>
               <h3>Проект Boxes</h3>
               <p class="projects__description">Приложение</p>
@@ -171,7 +162,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio6.jpg" alt="" />
+                <img src="./images/portfolio/portfolio6.jpg" alt="" />
               </div>
               <h3>Inspiration has no Borders</h3>
               <p class="projects__description">Веб-сайт</p>
@@ -183,7 +174,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio7.jpg" alt="" />
+                <img src="./images/portfolio/portfolio7.jpg" alt="" />
               </div>
               <h3>Издание Limited Edition</h3>
               <p class="projects__description">Дизайн</p>
@@ -195,7 +186,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio8.jpg" alt="" />
+                <img src="./images/portfolio/portfolio8.jpg" alt="" />
               </div>
               <h3>Проект LAB</h3>
               <p class="projects__description">Маркетинг</p>
@@ -207,7 +198,7 @@
                   функционала и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.
                 </p>
-                <img src="./images/portfolio9.jpg" alt="" />
+                <img src="./images/portfolio/portfolio9.jpg" alt="" />
               </div>
               <h3>Growing Business</h3>
               <p class="projects__description">Приложение</p>
@@ -236,22 +227,22 @@
           <div class="footer__socials socials">
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                <use href="./images/sprite.svg#instagram"></use>
               </svg>
             </a>
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                <use href="./images/sprite.svg#twitter"></use>
               </svg>
             </a>
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                <use href="./images/sprite.svg#facebook"></use>
               </svg>
             </a>
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                <use href="./images/sprite.svg#linkedin"></use>
               </svg>
             </a>
           </div>
@@ -262,7 +253,7 @@
             <input type="text" placeholder="E-mail" />
             <button type="submit">
               <p>Подписаться</p>
-              <svg><use href="./images/symbol-defs.svg#icon-send"></use></svg>
+              <svg><use href="./images/sprite.svg#send"></use></svg>
             </button>
           </form>
         </div>

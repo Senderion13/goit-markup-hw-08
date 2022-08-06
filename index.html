@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/styles.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
 
     <title>Студия</title>
   </head>
@@ -26,13 +26,10 @@
           >
           <button type="button" class="menu-button" onclick="menuOpen()">
             <svg>
-              <use
-                class="menu-icon"
-                href="./images/symbol-defs.svg#icon-menu"
-              ></use>
+              <use class="menu-icon" href="./images/sprite.svg#menu"></use>
               <use
                 class="menu-close-icon"
-                href="./images/symbol-defs.svg#icon-menu-close"
+                href="./images/sprite.svg#menu-close"
               ></use>
             </svg>
           </button>
@@ -50,10 +47,7 @@
           <li>
             <a href="mailto: info@devstudio.com" class="link">
               <svg width="16px" height="12px">
-                <use
-                  href="./images/symbol-defs.svg#icon-email"
-                  width="16px"
-                ></use>
+                <use href="./images/sprite.svg#email" width="16px"></use>
               </svg>
               info@devstudio.com
             </a>
@@ -61,10 +55,7 @@
           <li>
             <a href="tel:+380961111111" class="link">
               <svg width="10px" height="16px">
-                <use
-                  href="./images/symbol-defs.svg#icon-smartphone"
-                  width="10px"
-                ></use>
+                <use href="./images/sprite.svg#smartphone" width="10px"></use>
               </svg>
               +38 096 111 11 11</a
             >
@@ -99,7 +90,7 @@
             <ul class="peculiarities__list">
               <li class="peculiarities__item">
                 <svg class="peculiarities__icon">
-                  <use href="./images/symbol-defs.svg#icon-antenna"></use>
+                  <use href="./images/sprite.svg#antenna"></use>
                 </svg>
                 <h3>Внимание к деталям</h3>
                 <p>
@@ -109,7 +100,7 @@
               </li>
               <li class="peculiarities__item">
                 <svg class="peculiarities__icon">
-                  <use href="./images/symbol-defs.svg#icon-clock"></use>
+                  <use href="./images/sprite.svg#clock"></use>
                 </svg>
                 <h3>Пунктуальность</h3>
                 <p>
@@ -119,7 +110,7 @@
               </li>
               <li class="peculiarities__item">
                 <svg class="peculiarities__icon">
-                  <use href="./images/symbol-defs.svg#icon-diagram"></use>
+                  <use href="./images/sprite.svg#diagram"></use>
                 </svg>
                 <h3>Планирование</h3>
                 <p>
@@ -129,7 +120,7 @@
               </li>
               <li class="peculiarities__item">
                 <svg class="peculiarities__icon">
-                  <use href="./images/symbol-defs.svg#icon-astronaut"></use>
+                  <use href="./images/sprite.svg#astronaut"></use>
                 </svg>
                 <h3>Современные технологии</h3>
                 <p>
@@ -151,7 +142,11 @@
                   <p class="our-work__text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
                 </div>
                 <img
-                  src="./images/img1.jpg"
+                  src="./images/our_work/1.jpg"
+                  srcset="
+                    ./images/our_work/1.jpg    1x,
+                    ./images/our_work/1@2x.jpg 2x
+                  "
                   alt="Схема и клавиатура"
                   width="370px"
                 />
@@ -161,7 +156,11 @@
                   <p class="our-work__text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
                 </div>
                 <img
-                  src="./images/img2.jpg"
+                  src="./images/our_work/2.jpg"
+                  srcset="
+                    ./images/our_work/2.jpg    1x,
+                    ./images/our_work/2@2x.jpg 2x
+                  "
                   alt="Телефон и ноутбук"
                   width="370px"
                 />
@@ -171,7 +170,11 @@
                   <p class="our-work__text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
                 </div>
                 <img
-                  src="./images/img3.jpg"
+                  src="./images/our_work/3.jpg"
+                  srcset="
+                    ./images/our_work/3.jpg    1x,
+                    ./images/our_work/3@2x.jpg 2x
+                  "
                   alt="Планшет с палитрой цветов"
                   width="370px"
                 />
@@ -187,7 +190,11 @@
             <ul class="our-team__list">
               <li class="our-team__item">
                 <img
-                  src="./images/men1.jpg"
+                  src="./images/our_team/1.jpg"
+                  srcset="
+                    ./images/our_team/1.jpg    1x,
+                    ./images/our_team/1@2x.jpg 2x
+                  "
                   alt="Мужчина в коричневой рубашке"
                   width="100%"
                 />
@@ -196,29 +203,33 @@
                 <div class="socials">
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      <use href="./images/sprite.svg#instagram"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      <use href="./images/sprite.svg#twitter"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      <use href="./images/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      <use href="./images/sprite.svg#linkedin"></use>
                     </svg>
                   </a>
                 </div>
               </li>
               <li class="our-team__item">
                 <img
-                  src="./images/woman1.jpg"
+                  src="./images/our_team/2.jpg"
+                  srcset="
+                    ./images/our_team/2.jpg    1x,
+                    ./images/our_team/2@2x.jpg 2x
+                  "
                   alt="Женщина в пиджаке"
                   width="100%"
                 />
@@ -227,29 +238,33 @@
                 <div class="socials">
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      <use href="./images/sprite.svg#instagram"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      <use href="./images/sprite.svg#twitter"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      <use href="./images/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      <use href="./images/sprite.svg#linkedin"></use>
                     </svg>
                   </a>
                 </div>
               </li>
               <li class="our-team__item">
                 <img
-                  src="./images/men2.jpg"
+                  src="./images/our_team/3.jpg"
+                  srcset="
+                    ./images/our_team/3.jpg    1x,
+                    ./images/our_team/3@2x.jpg 2x
+                  "
                   alt="Мужчина в белой рубашке"
                   width="100%"
                 />
@@ -258,29 +273,33 @@
                 <div class="socials">
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      <use href="./images/sprite.svg#instagram"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      <use href="./images/sprite.svg#twitter"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      <use href="./images/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      <use href="./images/sprite.svg#linkedin"></use>
                     </svg>
                   </a>
                 </div>
               </li>
               <li class="our-team__item">
                 <img
-                  src="./images/men3.jpg"
+                  src="./images/our_team/4.jpg"
+                  srcset="
+                    ./images/our_team/4.jpg    1x,
+                    ./images/our_team/4@2x.jpg 2x
+                  "
                   alt="Мужчина в черной футболке"
                   width="100%"
                 />
@@ -289,22 +308,22 @@
                 <div class="socials">
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      <use href="./images/sprite.svg#instagram"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      <use href="./images/sprite.svg#twitter"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      <use href="./images/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                   <a class="socials__link" href="#">
                     <svg>
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      <use href="./images/sprite.svg#linkedin"></use>
                     </svg>
                   </a>
                 </div>
@@ -321,32 +340,32 @@
             <ul class="clients__list">
               <li>
                 <svg>
-                  <use href="./images/symbol-defs.svg#icon-Client1"></use>
+                  <use href="./images/sprite.svg#Client1"></use>
                 </svg>
               </li>
               <li>
                 <svg>
-                  <use href="./images/symbol-defs.svg#icon-Client2"></use>
+                  <use href="./images/sprite.svg#Client2"></use>
                 </svg>
               </li>
               <li>
                 <svg>
-                  <use href="./images/symbol-defs.svg#icon-Client3"></use>
+                  <use href="./images/sprite.svg#Client3"></use>
                 </svg>
               </li>
               <li>
                 <svg>
-                  <use href="./images/symbol-defs.svg#icon-Client4"></use>
+                  <use href="./images/sprite.svg#Client4"></use>
                 </svg>
               </li>
               <li>
                 <svg>
-                  <use href="./images/symbol-defs.svg#icon-Client5"></use>
+                  <use href="./images/sprite.svg#Client5"></use>
                 </svg>
               </li>
               <li>
                 <svg>
-                  <use href="./images/symbol-defs.svg#icon-Client6"></use>
+                  <use href="./images/sprite.svg#Client6"></use>
                 </svg>
               </li>
             </ul>
@@ -374,22 +393,22 @@
           <div class="footer__socials socials">
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                <use href="./images/sprite.svg#instagram"></use>
               </svg>
             </a>
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                <use href="./images/sprite.svg#twitter"></use>
               </svg>
             </a>
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                <use href="./images/sprite.svg#facebook"></use>
               </svg>
             </a>
             <a class="socials__link" href="#">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                <use href="./images/sprite.svg#linkedin"></use>
               </svg>
             </a>
           </div>
@@ -400,7 +419,7 @@
             <input type="text" placeholder="E-mail" />
             <button type="submit">
               <p>Подписаться</p>
-              <svg><use href="./images/symbol-defs.svg#icon-send"></use></svg>
+              <svg><use href="./images/sprite.svg#send"></use></svg>
             </button>
           </form>
         </div>
@@ -412,7 +431,7 @@
       <div class="modal__content">
         <button class="modal__close-circle" onclick="modalClose()">
           <svg>
-            <use href="./images/symbol-defs.svg#icon-close"></use>
+            <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
         <form class="modal__form">
@@ -428,7 +447,7 @@
               id="name"
             />
             <svg class="modal__form__input-icon">
-              <use href="./images/symbol-defs.svg#icon-person-black"></use>
+              <use href="./images/sprite.svg#person-black"></use>
             </svg>
           </div>
 
@@ -436,7 +455,7 @@
             <label for="tel" class="modal__form__label">Телефон</label>
             <input class="modal__form__input" type="tel" name="tel" id="tel" />
             <svg class="modal__form__input-icon">
-              <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+              <use href="./images/sprite.svg#phone-black"></use>
             </svg>
           </div>
 
@@ -449,7 +468,7 @@
               id="email"
             />
             <svg class="modal__form__input-icon">
-              <use href="./images/symbol-defs.svg#icon-email-black"></use>
+              <use href="./images/sprite.svg#email-black"></use>
             </svg>
           </div>
 
